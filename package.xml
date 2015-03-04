@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>camera</name>
+  <version>0.0.0</version>
+  <description>
+    camera
+  </description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <!-- Example:  -->
+  <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
+  <maintainer email="jane.doe@example.com">Jane Doe</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>BSD</license>
+
+  <url>http://ros.org/wiki/camera</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
+  
+  <!-- ROS packages dependencies -->
+  <depend>camera_calibration_parsers</depend>
+  <depend>image_view</depend>
+  
+  <!--   <depend>usb_cam</depend> -->
+  
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+
+    <!-- Other tools can request additional information be placed here -->
+        <cpp cflags="-I${prefix} -I${prefix}/build"
+         lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib"/>
+  </export>
+</package>

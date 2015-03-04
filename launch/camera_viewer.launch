@@ -1,0 +1,15 @@
+<launch>
+<arg name="robot"/>z
+<group ns="$(arg robot)">
+  <node pkg="image_view" type="image_view" output="screen"
+        name="rgb_viewer"
+        args="image:=rgb"/>
+
+<!--
+  <node pkg="nodelet" type="nodelet" name="camera_nodelet"
+        args="load image_view/image camera_nodelet_manager
+              image:=rgb"
+        output="screen"/>
+-->
+</group>
+</launch>

@@ -1,0 +1,18 @@
+<launch>
+<!-- run with for instance
+ camera_info_url:=eeePc_arnaud_webcam_calibration_new.yaml -->
+<arg  name="camera_info_url"/>
+
+<group ns="camera">
+  <node pkg="image_proc" name="image_proc" type="image_proc"/>
+
+  <node pkg="uvc_camera" name="uvc_camera" type="uvc_camera_node"
+        args="_camera_info_url:=file://$(find kinect)/data/$(arg camera_info_url)"/>
+
+  <node pkg="image_view" type="image_view" output="screen"
+        name="raw_viewer" args="image:=image_raw"/>
+
+  <node pkg="image_view" type="image_view" output="screen"
+        name="rect_viewer" args="image:=image_rect_color"/>
+</group>
+</launch>

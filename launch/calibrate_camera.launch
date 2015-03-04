@@ -1,0 +1,15 @@
+<launch>
+<arg name="device" default="/dev/video0"/>
+<arg name="square_size_mm" default="0.084"/>
+<arg name="number_checkerboard_inner_corners" default="5x3"/>
+
+<node pkg="usb_cam" type="usb_cam_node" name="usb_cam_node" output="screen">
+  <param name="pixel_format" value="yuyv" />
+  <param name="video_device" value="$(arg device)" />
+</node>
+
+<node pkg="camera_calibration" type="cameracalibrator.py" name="cameracalibrator"
+      output="screen"
+      args="--size $(arg number_checkerboard_inner_corners) --square $(arg square_size_mm)
+            image:=/usb_cam_node/image_raw camera:=/usb_cam_node  --no-service-check"/>
+</launch>
