@@ -12,8 +12,8 @@ if [ -z $ROS_WORKSPACE ]; then
     echo "###########################################################"
     echo ""
 else
-    cd $ROS_WORKSPACE
-    svn co https://svn.code.sf.net/p/bosch-ros-pkg/code/trunk/stacks/bosch_drivers/usb_cam
-    rospack profile
-	rosmake usb_cam
+#    cd $ROS_WORKSPACE
+#    svn co https://svn.code.sf.net/p/bosch-ros-pkg/code/trunk/stacks/bosch_drivers/usb_cam
+#    rospack profile
+#	 rosmake usb_cam
 fi
