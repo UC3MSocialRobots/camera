@@ -27,7 +27,7 @@
   <depend>camera_calibration_parsers</depend>
   <depend>image_view</depend>
   
-  <!--   <depend>usb_cam</depend> -->
+  <!--  <depend>usb_cam</depend>  -->
   
 
   <!-- The export tag contains other, unspecified, tags -->

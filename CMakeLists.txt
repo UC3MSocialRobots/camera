@@ -5,8 +5,8 @@ project(camera)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS roscpp roslib 
-								 camera_calibration_parsers image_view
-								 #usb_cam
+								 camera_calibration_parsers image_view 
+								 #usb_cam 
 								 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,9 +53,9 @@ find_package(catkin REQUIRED COMPONENTS roscpp roslib
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS src
-  CATKIN_DEPENDS roscpp camera_calibration_parsers image_view
-						#usb_cam
-)
+  CATKIN_DEPENDS roscpp camera_calibration_parsers image_view 
+  #usb_cam 
+  )
 
 ###########
 ## Build ##
