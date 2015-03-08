@@ -68,7 +68,6 @@ include_directories(
 )
 
 ADD_SUBDIRECTORY(src)
-SET(AD_USE_ROS 1)
 
 ## Declare a cpp library
 # add_library(foo
