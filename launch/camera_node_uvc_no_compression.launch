@@ -4,7 +4,7 @@
 <arg name="fps" default="30"/>
 <arg name="camera_info_url" default="file://$(find kinect)/data/logitech_calibration.yaml" /> 
 
-<remap from="/$(arg robot)_camera/rgb/image_raw" to="/$(arg robot)/rgb"/>
+<remap from="/$(arg robot)/camera/rgb/image_raw" to="/$(arg robot)/rgb"/>
 <include file="$(find camera)/launch/camera_node_uvc.launch">
   <arg name="robot" value="$(arg robot)" />
   <arg name="fps" value="$(arg fps)" />

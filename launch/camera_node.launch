@@ -13,7 +13,7 @@
 
 
 <!-- https://github.com/bosch-ros-pkg/usb_cam/blob/groovy-devel/nodes/usb_cam_node.cpp -->
-<group ns="$(arg robot)_camera">
+<group ns="$(arg robot)/camera">
   <node pkg="image_proc" name="image_proc" type="image_proc"/>
 
   <node pkg="usb_cam" type="usb_cam_node" name="rgb" output="screen">
@@ -41,7 +41,7 @@
         output="screen" />
   <group ns="rgb">
     <node pkg="nodelet" type="nodelet" name="camera_nodelet"
-          args="load uvc_camera/CameraNodelet /$(arg robot)_camera/camera_nodelet_manager
+          args="load uvc_camera/CameraNodelet /$(arg robot)/camera/camera_nodelet_manager
                 _pixel_format:=yuyv _device:=$(arg device)"
           output="screen"/>
   </group>
