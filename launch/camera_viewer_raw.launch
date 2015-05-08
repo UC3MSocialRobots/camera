@@ -1,6 +1,6 @@
 <launch>
 <arg name="robot"/>
-<group ns="$(arg robot)/camera">
+<group ns="$(arg robot)_camera">
   <node pkg="image_view" type="image_view" output="screen"
         name="rgb_viewer" args="image:=rgb/image_raw"/>
 </group>
