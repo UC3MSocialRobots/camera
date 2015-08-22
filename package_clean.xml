@@ -2,19 +2,18 @@
 <package format="2">
   <name>camera</name>
   <version>0.0.0</version>
-  <description>
-    The camera package provides nodes to acquire information from a camera device.
-    It wraps the popular driver packages "uvc_cam" and "usb_cam".
-  </description>
-  <maintainer email="arnaud.a.ramey@gmail.com">Arnaud Ramey</maintainer>
+  <description>The camera package provides nodes to acquire information from a
+  Microsoft Kinect device.</description>
+  <maintainer email="jane.doe@example.com">Jane Doe</maintainer>
   <license>LGPLv3</license>
   <url>http://ros.org/wiki/camera</url>
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>roscpp</depend>
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
   <depend>camera_calibration_parsers</depend>
   <depend>image_view</depend>
   <export>
     <cpp cflags="-I${prefix} -I${prefix}/build"
-         lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib" />
+    lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib" />
   </export>
 </package>
